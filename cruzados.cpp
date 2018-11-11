@@ -369,12 +369,12 @@ void Cruza::ObX(){
 
 void Cruza::ImprimirRes(int **arr, int **arr2){
     for(int i=0;i<poblacion;i++){
-        cout<<i+1<<" | ";
+        cout<<i+1<<"   |   ";
         for(int j=0;j<alelos;j++)
-            cout<<" "<<arr[i][j];
-        cout<<" | ";
+            cout<<arr[i][j];
+        cout<<"   |   ";
         for(int j=0;j<alelos;j++)
-            cout<<" "<<arr2[i][j];
+            cout<<arr2[i][j];
         cout<<endl;
     }
 }
@@ -428,6 +428,8 @@ int main(int argc, char const *argv[])
                 cout<<"Order Crossover"<<endl;
                 cout<<"Escribe el tamanio de la subcadena: ";
                 cin>>tamsub;
+                cout<<endl<<"No. |   Individuos   |   Cruza "<<endl;
+    			cout<<"____________________________________________"<<endl;
                 c.OX(tamsub);
                 
                 break;
@@ -439,18 +441,24 @@ int main(int argc, char const *argv[])
                 cin>>pto1;
                 cout<<"Escribe el punto de cruza 2: ";
                 cin>>pto2;
+                cout<<endl<<"No. |   Individuos   |   Cruza "<<endl;
+    			cout<<"____________________________________________"<<endl;
                 c.PMX(pto1,pto2);
                 break;
             case 3:
                 system("cls");
                 cout<<"Position-based Crossover"<<endl;
                 cout<<"Los indices tomados son: 1,4,6,9"<<endl;
+                cout<<endl<<"No. |   Individuos   |   Cruza "<<endl;
+    			cout<<"____________________________________________"<<endl;
                 c.PbX();
                 break;
             case 4:
                 system("cls");
                 cout<<"Order-based Crossover"<<endl;
                 cout<<"Los indices tomados son: 1,4,6,9"<<endl;
+                cout<<endl<<"No. |   Individuos   |   Cruza "<<endl;
+    			cout<<"____________________________________________"<<endl;
                 c.ObX();
                 break;
             case 5:
@@ -458,7 +466,7 @@ int main(int argc, char const *argv[])
                 break;
         }
         c.LiberarMemoria();
-        cout<<"Deseas volver al menu?(s/n): "<<endl;
+        cout<<endl<<"Deseas volver al menu?(s/n): "<<endl;
         cin>>opc;
         
         system("cls");
